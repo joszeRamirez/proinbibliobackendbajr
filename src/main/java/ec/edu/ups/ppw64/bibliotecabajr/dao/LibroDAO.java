@@ -3,10 +3,12 @@ package ec.edu.ups.ppw64.bibliotecabajr.dao;
 import java.util.List;
 
 import ec.edu.ups.ppw64.bibliotecabajr.model.Libro;
+import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 
+@Stateless
 public class LibroDAO {
 	@PersistenceContext
 	private EntityManager es;
