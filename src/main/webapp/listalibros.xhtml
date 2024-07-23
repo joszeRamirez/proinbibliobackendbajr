@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	color: #333;
+	margin: 0;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	color: #0056b3;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+th, td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: #f2f2f2;
+	color: #333;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+tr:hover {
+	background-color: #ddd;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background-color: #0056b3;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #004494;
+}
+</style>
+
+</h:head>
+<body>
+	<h1>Listado de Libros</h1>
+	<h:dataTable value="#{libros.listado}" var="libro">
+		<h:column>
+			<f:facet name="header">Código</f:facet>
+            #{libro.codigo}
+        </h:column>
+		<h:column>
+			<f:facet name="header">Cédula</f:facet>
+            #{libro.cedula}
+        </h:column>
+		<h:column>
+			<f:facet name="header">Nombre</f:facet>
+            #{libro.nombre}
+        </h:column>
+		<h:column>
+			<f:facet name="header">Dirección</f:facet>
+            #{libro.direccion}
+        </h:column>
+	</h:dataTable>
+
+</body>
+</html>
